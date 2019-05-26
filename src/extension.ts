@@ -24,14 +24,15 @@ export function activate(context: ExtensionContext) {
     platform() == "win32" ? "language_server.bat" : "language_server.sh";
 
   const serverOpts = {
-    command: context.asAbsolutePath("./elixir-ls-release/" + command)
+    command: context.asAbsolutePath("./elixir-ls-release/" + command),
+    elixir: {trace: {server: true}}
   };
 
   // If the extension is launched in debug mode then the debug server options are used
   // Otherwise the run options are used
   let serverOptions: ServerOptions = {
     run: serverOpts,
-    debug: serverOpts
+    debug: serverOpts,
   };
 
   // Options to control the language client
