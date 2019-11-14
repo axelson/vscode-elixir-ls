@@ -7,6 +7,8 @@ tsc -p ./
 cp elixir-ls/CHANGELOG.md .
 
 cd elixir-ls
+#cp .tool-versions
+mix deps.get
 mix elixir_ls.release -o ../elixir-ls-release
 
 #cd ~/config/repos/elixir-ls
