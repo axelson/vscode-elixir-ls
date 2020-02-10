@@ -2,7 +2,19 @@
 {
 	"version": "0.1.0",
 	"configurations": [
-
+		{
+			"type": "extensionHost",
+			"request": "launch",
+			"name": "Launch Extension New",
+			"runtimeExecutable": "${execPath}",
+			"args": [
+				"--extensionDevelopmentPath=${workspaceFolder}"
+			],
+			"outFiles": [
+				"${workspaceFolder}/out/**/*.js"
+			],
+			"preLaunchTask": "npm"
+		},
 		{
 			"name": "Launch Extension",
 			"type": "extensionHost",
