@@ -162,7 +162,11 @@
       {
         "language": "elixir",
         "scopeName": "source.elixir",
-        "path": "./syntaxes/elixir.json"
+        "path": "./syntaxes/elixir.json",
+        "embeddedLanguages": {
+          "comment.documentation.heredoc.elixir": "markdown",
+          "comment.documentation.string": "markdown"
+        }
       },
       {
         "language": "EEx",
