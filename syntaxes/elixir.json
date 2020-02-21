@@ -25,6 +25,9 @@
       "name": "comment.documentation.heredoc.elixir",
       "patterns": [
         {
+          "include": "text.html.markdown"
+        },
+        {
           "include": "#interpolated_elixir"
         },
         {
@@ -38,6 +41,9 @@
       "end": "\\s*'''",
       "name": "comment.documentation.heredoc.elixir",
       "patterns": [
+        {
+          "include": "text.html.markdown"
+        },
         {
           "include": "#interpolated_elixir"
         },
@@ -53,6 +59,12 @@
       "name": "comment.documentation.heredoc.elixir",
       "patterns": [
         {
+          "include": "text.html.markdown"
+        },
+        {
+          "include": "#interpolated_elixir"
+        },
+        {
           "include": "#escaped_char"
         }
       ]
@@ -63,6 +75,12 @@
       "end": "\\s*'''",
       "name": "comment.documentation.heredoc.elixir",
       "patterns": [
+        {
+          "include": "text.html.markdown"
+        },
+        {
+          "include": "#interpolated_elixir"
+        },
         {
           "include": "#escaped_char"
         }
@@ -80,10 +98,7 @@
       "name": "comment.documentation.string",
       "patterns": [
         {
-          "include": "#interpolated_elixir"
-        },
-        {
-          "include": "#escaped_char"
+          "include": "text.html.markdown"
         }
       ]
     },
