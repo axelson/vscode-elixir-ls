@@ -2,10 +2,12 @@
 
 set -xe
 
+~/config/scripts/kill-vscode.sh
 echo "Building ls_proxy"
 pushd /home/jason/dev/ls_proxy/app
 mix deps.get
 env MIX_ENV=prod LS_HTTP_PROXY_TO='http://localhost:4000/api/messages' mix escript.build
+#env MIX_ENV=prod LS_HTTP_PROXY_TO='http://192.168.1.4:4000/api/messages' mix escript.build
 #env MIX_ENV=prod mix escript.build
 popd
 echo -e "\nDone!"
