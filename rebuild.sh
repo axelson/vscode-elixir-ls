@@ -23,5 +23,5 @@ echo -e "\nDone!"
 echo "Building vsce"
 vsce package
 echo -e "\nDone!"
-code --install-extension ./elixir-ls-0.4.0.vsix  --force
+code --install-extension ./elixir-ls-0.6.0-dev.vsix  --force
 code
