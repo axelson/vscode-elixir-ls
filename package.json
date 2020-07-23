@@ -390,7 +390,10 @@
       "commandPalette": [
         {
           "command": "extension.copyDebugInfo",
-          "when": "editorLangId == elixir || editorLangId == eex || editorLangId == html-eex"
+          "when": "editorLangId == elixir || editorLangId == eex || editorLangId == html-eex",
+          "options": {
+            "cwd": "/home/jason/dev/basel"
+          }
         }
       ]
     }

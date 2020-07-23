@@ -73,13 +73,20 @@ function detectConflictingExtension(extensionId: string): void {
 }
 
 function copyDebugInfo(): void {
+  const cwd = execSync(`pwd`);
+  console.log(`cwd ${cwd}`);
+  const asdfCurrent = execSync(`asdf current`);
+  console.log(`asdf current ${asdfCurrent}`);
   const elixirVersion = execSync(`elixir --version`);
   const extension = vscode.extensions.getExtension("jakebecker.elixir-ls");
   if (!extension) {
     return;
   }
 
+
   const message = `
+* cwd: ${cwd}
+* asdf current ${asdfCurrent}
   * Elixir & Erlang versions (elixir --version): ${elixirVersion}
   * VSCode ElixirLS version: ${extension.packageJSON.version}
   * Operating System Version: ${os.platform()} ${os.release()}
